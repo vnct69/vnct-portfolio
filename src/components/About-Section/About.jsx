@@ -1,101 +1,178 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact, FaDatabase } from "react-icons/fa";
+import { SiPhp, SiDotnet, SiMysql, SiXampp, SiTailwindcss, SiFramer, SiFlutter } from "react-icons/si";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const iconWrapperClasses = "flex flex-col items-center w-20 transform transition duration-300 hover:scale-110 hover:-translate-y-1";
+const iconClasses = "transition-colors duration-300";
+
 
 const About = () => {
   return (
-    <section
+    <motion.section
       id="about"
       className="py-16 px-4 sm:px-6 lg:px-20 bg-gray-100 dark:bg-black text-black dark:text-white transition-colors duration-500"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
     >
+
       <div className="flex flex-col md:flex-row gap-16 p-12">
-        {/* Left Container - Image */}
-        <div className="flex-1 flex items-center justify-center">
-          <img
-            src="/about-img.jpg"
-            alt="about-img"
-            className="rounded-2xl w-full object-cover shadow-lg"
-          />
-        </div>
-
-        {/* Right Container */}
-        <div className="flex-1 flex flex-col gap-8">
-
-          {/* About Me Section */}
-          <div className="bg-[c8c8c9] dark:bg-[#060606] rounded-xl shadow-md p-6">
-            <h2 className="text-6xl font-bold mb-4">
-                <span className="text-gray-900 dark:text-gray-100">About</span>
-                <span className="text-[#4ca771]"> Me</span>
-            </h2>
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-400">
-              I'm a passionate web developer with a strong focus on building modern, responsive, and interactive web applications. I enjoy blending technology and creativity, bringing ideas to life through clean, efficient code paired with thoughtful, user-centered design. Whether it's crafting intuitive interfaces or developing scalable features, I aim to create experiences that are both functional and visually engaging.
-            </p>
-
-            <h3 className="text-xl font-semibold mb-2">
-                <span className="text-gray-900 dark:text-gray-100">Experience</span>
-                <span className="text-[#4ca771]"> and Achievements</span>
-            </h3>
-
-            <ul className="list-disc list-inside mb-4 space-y-1 text-gray-600 dark:text-gray-400">
-              <li>Lead Developer Full Stack (DepEd San Pablo - Internship)</li>
-              <li>UI/UX Design and Programmer (Capstone/Thesis System)</li>
-              <li>Dean Lister (1st year College)</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold mb-2">
-                <span className="text-gray-900 dark:text-gray-100">Contact </span>
-                <span className="text-[#4ca771]">Information</span>
-            </h3>
-            <p className="mb-1 text-gray-600 dark:text-gray-400">📍 San Pablo City, Laguna, Philippines</p>
-            <p className="text-gray-600 dark:text-gray-400">✉️ vnctescondo@gmail.com</p>
+          {/* Left Container - Image */}
+          <div className="flex-1 flex items-center justify-center">
+            <motion.img
+                src="/about-img.jpg"
+                alt="about-img"
+                className="rounded-2xl w-full max-w-[600px] object-cover shadow-lg hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_rgba(76,167,113,0.6)] transition-all duration-500 ease-in-out"
+                initial={{ opacity: 0, y: 0.95 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.6 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+              />
           </div>
 
-          {/* Tools and Frameworks Section */}
-          <div className="bg-[c8c8c9] dark:bg-[#060606] rounded-xl shadow-md p-6">
-            <h2 className="text-3xl font-bold mb-4">
-               <span className="text-gray-900 dark:text-gray-100">Tools </span>
-               <span className="text-[#4ca771]"> and Frameworks</span>
-            </h2>
+          {/* Right Container */}
+          <div className="flex-1 flex flex-col gap-8">
 
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Expertise</h3>
-              <div className="flex flex-wrap gap-4">
-                {[
-                  { name: "HTML", logo: "/html.png" },
-                  { name: "CSS", logo: "/css.png" },
-                  { name: "JavaScript", logo: "/js.png" },
-                  { name: "Bootstrap", logo: "/bootstrap.png" },
-                ].map((tool) => (
-                  <div key={tool.name} className="flex items-center gap-2">
-                    <img src={tool.logo} alt={tool.name} className="h-8 w-8" />
-                    <span>{tool.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* About Me Section */}
+            <motion.div className="bg-[c8c8c9] dark:bg-[#060606] rounded-xl shadow-md p-6"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+            >
+                  {/* Heading */}
+                  <h2 className="text-6xl font-bold mb-4">
+                      <span className="text-gray-900 dark:text-gray-100">About</span>
+                      <span className="text-[#4ca771]"> Me</span>
+                  </h2>
+                  {/* Description */}
+                  <p className="text-lg mb-6 text-gray-600 dark:text-gray-400">
+                    I'm a passionate web developer with a strong focus on building modern, responsive, and interactive web applications. I enjoy blending technology and creativity, bringing ideas to life through clean, efficient code paired with thoughtful, user-centered design. Whether it's crafting intuitive interfaces or developing scalable features, I aim to create experiences that are both functional and visually engaging.
+                  </p>
+                  {/* Exp & Achievements */}
+                  <h3 className="text-xl font-semibold mb-2">
+                      <span className="text-gray-900 dark:text-gray-100">Experience and </span>
+                      <span className="text-[#4ca771]">Achievements</span>
+                  </h3>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Other</h3>
-              <div className="flex flex-wrap gap-4">
-                {[
-                  { name: "React", logo: "/react.png" },
-                  { name: "Tailwind", logo: "/tailwind.png" },
-                  { name: "Framer Motion", logo: "/framer.png" },
-                  { name: "C#", logo: "/csharp.png" },
-                  { name: "ASP.NET Core", logo: "/dotnet.png" },
-                  { name: "MySQL", logo: "/mysql.png" },
-                  { name: "XAMPP", logo: "/xampp.png" },
-                ].map((tool) => (
-                  <div key={tool.name} className="flex items-center gap-2">
-                    <img src={tool.logo} alt={tool.name} className="h-8 w-8" />
-                    <span>{tool.name}</span>
+                  <ul className="list-disc list-inside mb-4 space-y-1 text-gray-600 dark:text-gray-400">
+                    <li>Lead Developer Full Stack (DepEd San Pablo - Internship)</li>
+                    <li>UI/UX Design and Programmer (Capstone/Thesis System)</li>
+                    <li>Dean Lister (1st year College)</li>
+                  </ul>
+                  {/* Contact Information */}
+                  <h3 className="text-xl font-semibold mb-2">
+                      <span className="text-gray-900 dark:text-gray-100">Contact </span>
+                      <span className="text-[#4ca771]">Information</span>
+                  </h3>
+                  <p className="mb-1 text-gray-600 dark:text-gray-400">📍 San Pablo City, Laguna, Philippines</p>
+                  <p className="text-gray-600 dark:text-gray-400">✉️ vnctescondo@gmail.com</p>
+            </motion.div>
+
+
+        
+            {/* Tools and Frameworks Section */}
+            <motion.div className="bg-[c8c8c9] dark:bg-[#060606] rounded-xl shadow-md p-6"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+            >
+              <h2 className="text-3xl font-bold mb-4">
+                <span className="text-gray-900 dark:text-gray-100">Tools and </span>
+                <span className="text-[#4ca771]">Frameworks</span>
+              </h2>
+
+              {/* Expertise Section */}
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-4 text-gray-600 dark:text-gray-400">Expertise</h3>
+                  <div className="flex flex-wrap justify-center gap-6">
+                    <div className={iconWrapperClasses}>
+                      <FaHtml5 size={40} className={`${iconClasses} text-orange-600 hover:text-orange-500`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">HTML</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <FaCss3Alt size={40} className={`${iconClasses} text-blue-600 hover:text-blue-500`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">CSS</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <FaJs size={40} className={`${iconClasses} text-yellow-400 hover:text-yellow-300`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">JavaScript</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <FaBootstrap size={40} className={`${iconClasses} text-purple-600 hover:text-purple-500`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">Bootstrap</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <SiPhp size={40} className={`${iconClasses} text-indigo-600 hover:text-indigo-500`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">PHP</span>
+                    </div>
                   </div>
-                ))}
               </div>
-            </div>
+
+              {/* Other Tools Section */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-600 dark:text-gray-400">Other</h3>
+                  <div className="flex flex-wrap justify-center gap-6">
+                    <div className={iconWrapperClasses}>
+                      <FaReact size={40} className={`${iconClasses} text-cyan-500 hover:text-cyan-400`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">React</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <SiDotnet size={40} className={`${iconClasses} text-blue-700 hover:text-blue-600`} />
+                      <span className="mt-2 text-center text-sm text-gray-700 dark:text-gray-300">ASP.NET Core MVC(.Net 6)</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <SiTailwindcss size={40} className={`${iconClasses} text-sky-500 hover:text-sky-400`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">Tailwind</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <SiFlutter size={40} className={`${iconClasses} text-blue-400 hover:text-blue-300`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">Flutter</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <SiMysql size={40} className={`${iconClasses} text-orange-500 hover:text-orange-400`} />
+                      <span className="mt-2 text-sm text-gray-700 dark:text-gray-300">MySQL</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <FaDatabase size={40} className={`${iconClasses} text-red-700 hover:text-red-600`} />
+                      <span className="mt-2 text-center text-sm text-gray-700 dark:text-gray-300">SQL Server</span>
+                    </div>
+
+                    <div className={iconWrapperClasses}>
+                      <SiFramer size={40} className={`${iconClasses} text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-400`} />
+                      <span className="mt-2 text-center text-sm text-gray-700 dark:text-gray-300">Framer Motion</span>
+                    </div>
+                  </div>
+
+              </div>
+            </motion.div>
+
           </div>
-
-        </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
