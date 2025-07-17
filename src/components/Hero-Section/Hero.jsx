@@ -1,0 +1,138 @@
+import { useState, useEffect } from "react";
+import ResumeModal from "./ResumeModal"; 
+import ParticlesBackground from "./ParticlesBackground";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+
+
+const Hero = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const rotatingItems = [
+    "Web Developer.",
+    "UI/UX Designer.",
+    "Video Editor.",
+  ];
+
+  // Rotating text every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % rotatingItems.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <motion.section
+      id="home"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="relative z-10 min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-12 bg-gray-100 dark:bg-black dark:text-white transition-colors duration-500"
+    >
+
+
+      
+      {/* Background Particles */}
+      <ParticlesBackground />
+
+    <div className="flex flex-col md:flex-row items-center justify-center max-w-8xl mx-auto w-full">
+      {/* Left - Image */}
+      <div className="md:w-1/3 flex justify-center">
+        <img
+          src="/hero-img.png"
+          alt="Aaron Vincent"
+          className="w-auto h-auto object-cover rounded-full border-4 shadow-lg"
+          style={{ borderColor: "#4CA771" }}
+        />
+      </div>
+
+      {/* Right - Text */}
+      <div className="md:w-1/3 mt-10 md:mt-0 md:pl-12 space-y-4 text-center md:text-left">
+        {/* Main Headline */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-2"
+          >
+            {/* Subheading */}
+            <p className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-100">
+              Creativity, logic, loops, and
+            </p>
+
+            {/* Main Headline */}
+            <h1 className="text-5xl md:text-6xl font-extrabold text-[#4ca771] drop-shadow-md leading-tight">
+              a little bit of luck
+            </h1>
+          </motion.div>
+
+          {/* Subheading with Rotating Text */}
+          <div className="mt-6 flex flex-wrap justify-center md:justify-start items-center gap-2 text-lg md:text-2xl font-medium text-gray-800 dark:text-gray-300">
+            <span className="italic">It's Aaron, a</span>
+
+            <motion.div
+              layout
+              className="px-2 py-1 flex items-center gap-1 rounded-md bg-gray-100 dark:bg-[#1a1a1a] bg-opacity-50 dark:bg-opacity-40 backdrop-blur-sm text-[#4ca771] dark:text-[#4ca771]"
+            >
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={rotatingItems[index]}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  {rotatingItems[index].replace("a", "")}
+                </motion.span>
+              </AnimatePresence>
+            </motion.div>
+          </div>
+
+
+        {/* Socials and Resume Section */}
+          <div className="mt-6 space-y-4">
+            {/* Social Icons */}
+            <div className="flex justify-center md:justify-start space-x-6">
+              <a href="https://www.facebook.com/vicente.escondo" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="text-2xl hover:text-[#4ca771]" />
+              </a>
+              <a href="https://www.instagram.com/vnct._" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-2xl hover:text-[#4ca771]" />
+              </a>
+              <a href="https://www.tiktok.com/@vnct_28" target="_blank" rel="noopener noreferrer">
+                <FaTiktok className="text-2xl hover:text-[#4ca771]" />
+              </a>
+              <a href="https://github.com/vnct69" target="_blank" rel="noopener noreferrer">
+                <FaGithub className="text-2xl hover:text-[#4ca771]" />
+              </a>
+              <a href="https://www.linkedin.com/in/vnct/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-2xl hover:text-[#4ca771]" />
+              </a>
+            </div>
+
+            {/* Resume Button */}
+            <div className="flex justify-center md:justify-start">
+              <button
+                onClick={() => {
+                  if (window.innerWidth < 768) {
+                    window.open("/Aaron Vincent Escondo - Resume.pdf", "_blank");
+                  } else {
+                    setShowModal(true);
+                  }
+                }}
+                className="w-[260px] md:w-auto px-6 py-2 border border-black dark:border-white text-black dark:text-white rounded transition duration-300 hover:bg-[#4CA771] hover:text-white hover:border-[#4CA771]"
+              >
+                Download CV
+              </button>
+            </div>
+            {showModal && <ResumeModal onClose={() => setShowModal(false)} />}
+          </div>
+        </div>
+      </div>
+    </motion.section>
+  );
+};
+
+export default Hero;
