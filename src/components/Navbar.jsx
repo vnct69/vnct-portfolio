@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
+import ParticlesBackground from "./Hero-Section/ParticlesBackground";
 
 const navItems = ["Home", "Projects", "About", "Education", "Contact"];
 
@@ -92,21 +93,29 @@ const Navbar = () => {
           <>
             {/* Backdrop */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
-            />
-            {/* Menu Panel */}
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{
+              opacity: 1,
+              backdropFilter:
+                theme === "dark" ? "blur(20px)" : "blur(60px)",
+            }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/40 z-40"
+          />
+
             <motion.div
               key="mobile-menu"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="fixed inset-0 bg-white dark:bg-black text-black dark:text-white z-50 flex flex-col p-6"
+              className="fixed inset-0 text-black dark:text-white z-50 flex flex-col p-6 overflow-hidden"
             >
+              {/* Particle Background for Mobile Menu */}
+              <ParticlesBackground />
+
+
               <div className="flex justify-between items-center">
                 <div className="text-2xl font-bold flex items-center">
                   <span>vnct</span>
@@ -130,7 +139,7 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <div className="mt-10 flex flex-col items-center justify-center flex-grow space-y-6 text-xl">
+              <div className="text-bold mt-10 flex flex-col items-center justify-center flex-grow space-y-6 text-xl">
                 {navItems.map((item) => (
                   <Link
                     key={item}
