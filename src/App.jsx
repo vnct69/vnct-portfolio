@@ -28,7 +28,7 @@ function App() {
           <Hero />
 
           {/* Motivational Quote Banner */}
-          <div className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#c8c8c9] dark:bg-[#060606] text-center transition-colors duration-500">
+          <div className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 bg-[c8c8c9] dark:bg-[#060606] text-center transition-colors duration-500">
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ function App() {
               <span className="block text-black dark:text-white">
                 "Stay genuine, tables 
               </span>
-              <span className="block text-[#4F46E5] dark:text-[#4ca771] mt-2">
+              <span className="block text-[#4CA771] dark:text-[#4ca771] mt-2">
                 will always turn."
               </span>
             </motion.h2>
