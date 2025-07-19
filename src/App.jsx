@@ -1,76 +1,56 @@
-import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { usePreferredTheme } from "./hooks/usePreferredTheme";
+import { useLoading } from "./hooks/useLoading";
+import { useShowParticles } from "./hooks/useShowParticles";
 
 import Loader from "./Loader";
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero-Section/Hero";
-import Projects from "./components/Project-Section/Projects";
 import ParticlesBackground from "./components/Hero-Section/ParticlesBackground";
+import Projects from "./components/Project-Section/Projects";
 import About from "./components/About-Section/About";
+import Education from "./components/Education-Section/Education";
+
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [showParticles, setShowParticles] = useState(false);
-
-  const [theme, setTheme] = useState(() => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) return savedTheme;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  });
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e) => {
-      const localTheme = localStorage.getItem("theme");
-      if (!localTheme) {
-        setTheme(e.matches ? "dark" : "light");
-      }
-    };
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
-
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    const homeSection = document.getElementById("home");
-    if (!homeSection) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowParticles(entry.isIntersecting);
-      },
-      { threshold: 0.6 }
-    );
-
-    observer.observe(homeSection);
-    return () => observer.disconnect();
-  }, []);
-
+  const [theme, setTheme] = usePreferredTheme();
+  const loading = useLoading(2000);
+  const showParticles = useShowParticles("home");
 
   return (
     <AnimatePresence mode="wait">
       {loading ? (
         <Loader key="loader" />
       ) : (
-        <>
         <div className="relative overflow-x-hidden">
           <Navbar />
           {showParticles && <ParticlesBackground />}
-          <Hero/>
-          <Projects theme={theme}/>
-          <About></About>
-          
-          <h1 className="text-center text-2xl font-bold mt-10 mb-6">
-           HI
-          </h1>
-          
+          <Hero />
+
+          {/* Motivational Quote Banner */}
+          <div className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#c8c8c9] dark:bg-[#060606] text-center transition-colors duration-500">
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-tight drop-shadow-sm tracking-tight"
+            >
+              <span className="block text-black dark:text-white">
+                "Stay genuine, tables 
+              </span>
+              <span className="block text-[#4F46E5] dark:text-[#4ca771] mt-2">
+                will always turn."
+              </span>
+            </motion.h2>
+          </div>
+
+          <Projects theme={theme} />
+          <About />
+          <Education />
+
+          <h1 className="text-center text-2xl font-bold mt-10 mb-6">HI</h1>
         </div>
-        </>
       )}
     </AnimatePresence>
   );
