@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
-import React from "react";
+import {useState} from "react";
+import ResumeModal from "./ResumeModal";
+ 
 import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact, FaDatabase } from "react-icons/fa";
 import { SiPhp, SiDotnet, SiMysql, SiXampp, SiTailwindcss, SiFramer, SiFlutter } from "react-icons/si";
+
 
 const containerVariants = {
   hidden: {},
@@ -17,6 +20,8 @@ const iconClasses = "transition-colors duration-300";
 
 
 const About = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <motion.section
       id="about"
@@ -72,13 +77,24 @@ const About = () => {
                     <li>UI/UX Design and Programmer (Capstone/Thesis System)</li>
                     <li>Dean Lister (1st year College)</li>
                   </ul>
-                  {/* Contact Information */}
-                  <h3 className="text-xl font-semibold mb-2">
-                      <span className="text-gray-900 dark:text-gray-100">Contact </span>
-                      <span className="text-[#4ca771]">Information</span>
-                  </h3>
-                  <p className="mb-1 text-gray-600 dark:text-gray-400">📍 San Pablo City, Laguna, Philippines</p>
-                  <p className="text-gray-600 dark:text-gray-400">✉️ vnctescondo@gmail.com</p>
+
+                  {/* Resume Button */}
+                  {/* <div className="flex justify-center md:justify-start"> */}
+                  <div className="mt-6 flex justify-center">
+                    <button
+                      onClick={() => {
+                        if (window.innerWidth < 768) {
+                          window.open("/Aaron Vincent Escondo - Resume.pdf", "_blank");
+                        } else {
+                          setShowModal(true);
+                        }
+                      }}
+                      className="w-[260px] md:w-auto px-6 py-2 border border-black dark:border-white text-black dark:text-white rounded transition duration-300 hover:bg-[#4CA771] hover:text-white hover:border-[#4CA771]"
+                    >
+                      Download CV
+                    </button>
+                  </div>
+                  {showModal && <ResumeModal onClose={() => setShowModal(false)} />}
             </motion.div>
 
 

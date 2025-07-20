@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import ResumeModal from "./ResumeModal"; 
+
 import ParticlesBackground from "./ParticlesBackground";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 
 const Hero = () => {
-  const [showModal, setShowModal] = useState(false);
+
   const [index, setIndex] = useState(0);
 
   const rotatingItems = [
@@ -90,45 +90,18 @@ const Hero = () => {
             </motion.div>
           </div>
 
-
-        {/* Socials and Resume Section */}
-          <div className="mt-6 space-y-4">
-            {/* Social Icons */}
-            <div className="flex justify-center md:justify-start space-x-6">
-              <a href="https://www.facebook.com/vicente.escondo" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="text-2xl hover:text-[#4ca771]" />
-              </a>
-              <a href="https://www.instagram.com/vnct._" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="text-2xl hover:text-[#4ca771]" />
-              </a>
-              <a href="https://www.tiktok.com/@vnct_28" target="_blank" rel="noopener noreferrer">
-                <FaTiktok className="text-2xl hover:text-[#4ca771]" />
-              </a>
-              <a href="https://github.com/vnct69" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-2xl hover:text-[#4ca771]" />
-              </a>
-              <a href="https://www.linkedin.com/in/vnct/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="text-2xl hover:text-[#4ca771]" />
-              </a>
-            </div>
-
-            {/* Resume Button */}
-            <div className="flex justify-center md:justify-start">
-              <button
-                onClick={() => {
-                  if (window.innerWidth < 768) {
-                    window.open("/Aaron Vincent Escondo - Resume.pdf", "_blank");
-                  } else {
-                    setShowModal(true);
-                  }
-                }}
-                className="w-[260px] md:w-auto px-6 py-2 border border-black dark:border-white text-black dark:text-white rounded transition duration-300 hover:bg-[#4CA771] hover:text-white hover:border-[#4CA771]"
-              >
-                Download CV
-              </button>
-            </div>
-            {showModal && <ResumeModal onClose={() => setShowModal(false)} />}
+          {/* View Projects Button */}
+          <div className="mt-6">
+            <button
+              onClick={() => {
+                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-[260px] md:w-auto px-6 py-2 border border-black dark:border-white text-black dark:text-white rounded transition duration-300 hover:bg-[#4CA771] hover:text-white hover:border-[#4CA771]"
+            >
+              View Projects
+            </button>
           </div>
+
         </div>
       </div>
     </motion.section>
