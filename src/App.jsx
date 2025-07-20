@@ -9,6 +9,7 @@ import ParticlesBackground from "./components/Hero-Section/ParticlesBackground";
 import Projects from "./components/Project-Section/Projects";
 import About from "./components/About-Section/About";
 import Education from "./components/Education-Section/Education";
+import Contact from "./components/Contact-Section/Contact";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -48,8 +49,24 @@ function App() {
           <Projects theme={theme} />
           <About />
           <Education />
+          <Contact/>
+          <motion.footer
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="pb-3 border-t border-gray-200 dark:border-gray-800"
+          >
+            <div className="container mx-auto px-6 py-6">
+              <div className="flex justify-center">
+                <p className="text-gray-600 dark:text-gray-400 text-sm text-center">
+                  © 2025 Vincent Escondo. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </motion.footer>
 
-          <h1 className="text-center text-2xl font-bold mt-10 mb-6">HI</h1>
+
         </div>
       )}
     </AnimatePresence>

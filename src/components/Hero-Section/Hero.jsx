@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 import ParticlesBackground from "./ParticlesBackground";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa"
 
 
 const Hero = () => {
@@ -101,6 +101,16 @@ const Hero = () => {
               View Projects
             </button>
           </div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            className="absolute bottom-6 left-1/2 transform -translate-x-1/2 cursor-default text-[#4CA771]"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+          >
+            <FaChevronDown size={28} />
+          </motion.div>
+
 
         </div>
       </div>

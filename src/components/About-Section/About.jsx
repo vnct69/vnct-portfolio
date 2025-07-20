@@ -66,17 +66,6 @@ const About = () => {
                   <p className="text-lg mb-6 text-gray-600 dark:text-gray-400">
                     I'm a passionate web developer with a strong focus on building modern, responsive, and interactive web applications. I enjoy blending technology and creativity, bringing ideas to life through clean, efficient code paired with thoughtful, user-centered design. Whether it's crafting intuitive interfaces or developing scalable features, I aim to create experiences that are both functional and visually engaging.
                   </p>
-                  {/* Exp & Achievements */}
-                  <h3 className="text-xl font-semibold mb-2">
-                      <span className="text-gray-900 dark:text-gray-100">Experience and </span>
-                      <span className="text-[#4ca771]">Achievements</span>
-                  </h3>
-
-                  <ul className="list-disc list-inside mb-4 space-y-1 text-gray-600 dark:text-gray-400">
-                    <li>Lead Developer Full Stack (DepEd San Pablo - Internship)</li>
-                    <li>UI/UX Design and Programmer (Capstone/Thesis System)</li>
-                    <li>Dean Lister (1st year College)</li>
-                  </ul>
 
                   {/* Resume Button */}
                   {/* <div className="flex justify-center md:justify-start"> */}
