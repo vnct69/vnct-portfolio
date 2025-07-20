@@ -50,21 +50,15 @@ function App() {
           <About />
           <Education />
           <Contact/>
-          <motion.footer
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="pb-3 border-t border-gray-200 dark:border-gray-800"
-          >
-            <div className="container mx-auto px-6 py-6">
+          <div className="container mx-auto px-6 py-6">
+            <footer className="pt-4 border-t border-gray-200 dark:border-gray-800">
               <div className="flex justify-center">
                 <p className="text-gray-600 dark:text-gray-400 text-sm text-center">
                   © 2025 Vincent Escondo. All rights reserved.
                 </p>
               </div>
-            </div>
-          </motion.footer>
+            </footer>
+          </div>
 
 
         </div>
