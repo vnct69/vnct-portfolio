@@ -36,7 +36,7 @@ const Projects = ({theme}) => {
       githublink: "https://github.com/vnct69/PWD-SPC-ASP.NET.git"
     },
     {
-      title: "vnct.dev – My Creative Space",
+      title: "Portfolio – vnct.dev",
       description: "An animated and responsive portfolio that highlights my best work, skills, and passion for web development.",
       techStack: ["React", "Tailwind CSS", "Framer Motion"],
       image: "/Portfolio.png",
