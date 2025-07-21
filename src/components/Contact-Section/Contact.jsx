@@ -165,7 +165,7 @@ const Contact = () => {
                   value={formValues.first_name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border bg-[c8c8c9] dark:bg-[#060606] focus:ring-2 focus:ring-[#4ca771]"
-                  placeholder="John"
+                  placeholder="Vnct"
                 />
                 {renderError("first_name")}
               </div>
@@ -176,7 +176,7 @@ const Contact = () => {
                   value={formValues.last_name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border bg-[c8c8c9] dark:bg-[#060606] focus:ring-2 focus:ring-[#4ca771]"
-                  placeholder="Doe"
+                  placeholder="Dev"
                 />
                 {renderError("last_name")}
               </div>
@@ -189,7 +189,7 @@ const Contact = () => {
                 value={formValues.email}
                 onChange={handleChange}
                 className="w-full px-4 py-3 rounded-lg border bg-[c8c8c9] dark:bg-[#060606] focus:ring-2 focus:ring-[#4ca771]"
-                placeholder="you@example.com"
+                placeholder="vnct.dev@example.com"
               />
               {renderError("email")}
             </div>

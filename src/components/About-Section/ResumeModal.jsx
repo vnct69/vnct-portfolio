@@ -25,7 +25,7 @@ const ResumeModal = ({ onClose }) => {
           <h2 className="text-2xl font-bold">My Resume</h2>
           <div className="flex space-x-4">
             <a
-              href="/Aaron Vincent Escondo - Resume.pdf"
+              href="/Aaron Vincent Escondo-Resume(final).pdf"
               download
               className="text-[#4ca771] hover:text-[#013237] px-4 py-2 transition"
             >
@@ -42,11 +42,11 @@ const ResumeModal = ({ onClose }) => {
 
         {/* PDF Preview */}
         <iframe
-          src="/Aaron Vincent Escondo - Resume.pdf"
+          src="/Aaron Vincent Escondo-Resume(final).pdf"
           title="Resume"
           className="w-full h-[70vh] border rounded"
           onError={() => {
-            window.open("/Aaron Vincent Escondo - Resume.pdf", "_blank");
+            window.open("/Aaron Vincent Escondo-Resume(final).pdf", "_blank");
             onClose(); // close the modal if fallback triggers
           }}
         ></iframe>

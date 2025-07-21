@@ -68,12 +68,11 @@ const About = () => {
                     </p>
 
                     {/* Resume Button */}
-                    {/* <div className="flex justify-center md:justify-start"> */}
                     <div className="mt-6 flex justify-center">
                       <button
                         onClick={() => {
                           if (window.innerWidth < 768) {
-                            window.open("/Aaron Vincent Escondo - Resume.pdf", "_blank");
+                            window.open("/Aaron Vincent Escondo-Resume(final).pdf", "_blank");
                           } else {
                             setShowModal(true);
                           }

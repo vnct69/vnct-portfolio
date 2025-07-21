@@ -21,7 +21,7 @@ const Projects = ({theme}) => {
   return [
     {
       title: "Library Management System",
-      description: "A full-featured system for handling borrow/return, user roles, and real-time notifications.",
+      description: "A full-featured system for efficient book lending, real-time notifications, and role-based access built with PHP and JavaScript.",
       techStack: ["PHP", "Javascript", "XAMPP", "PhpMyAdmin"],
       image: "/LRMS.png",
       link: "https://lrportal.depedsanpablo.com/lrportal2025/Landing/bytesprouts.php",
@@ -29,20 +29,21 @@ const Projects = ({theme}) => {
     },
     {
       title: "Web-Based Monitoring System Of PWD Discounts For DSWD San Pablo City With The Application Of QR Code Technology",
-      description: "A system that aims to help monitor registered PWDs that they still receive all the privileges they have from the government.",
+      description: "A web-based solution using QR code technology to track and validate PWD discount privileges, ensuring transparency and accessibility",
       techStack: ["C#", "ASP.NET Core (.NET 6)", "Javascript", "MySQL", "SQL Server"],
       image: "/PWD.png",
       link: "https://pwd-spc.runasp.net/",
       githublink: "https://github.com/vnct69/PWD-SPC-ASP.NET.git"
     },
     {
-      title: "Portfolio Website",
-      description: "A website showcasing my projects and skills.",
+      title: "vnct.dev – My Creative Space",
+      description: "An animated and responsive portfolio that highlights my best work, skills, and passion for web development.",
       techStack: ["React", "Tailwind CSS", "Framer Motion"],
-      image:  "/Portfolio.png",
-      link: "https://vnct.dev",
-      githublink: "",
+      image: "/Portfolio.png",
+      link: "https://vnct.vercel.app",
+      githublink: "https://github.com/vnct69/vnct-portfolio.git",
     },
+
   ];
 }, [theme]);
 
