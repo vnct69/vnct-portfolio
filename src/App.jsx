@@ -11,6 +11,8 @@ import About from "./components/About-Section/About";
 import Education from "./components/Education-Section/Education";
 import Contact from "./components/Contact-Section/Contact";
 
+import { Analytics } from '@vercel/analytics/react';
+
 import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
@@ -60,6 +62,7 @@ function App() {
             </footer>
           </div>
 
+            <Analytics />
 
         </div>
       )}
