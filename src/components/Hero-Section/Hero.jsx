@@ -39,7 +39,7 @@ const Hero = () => {
           <img
             src="/hero-img.png"
             alt="Aaron Vincent"
-            className="w-50 sm:w-52 md:w-auto h-auto object-cover rounded-full border-4 shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_rgba(76,167,113,0.6)]"
+            className="w-64 sm:w-52 md:w-auto h-auto object-cover rounded-full border-4 shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_rgba(76,167,113,0.6)]"
             style={{ borderColor: "#4CA771" }}
           />
         </div>

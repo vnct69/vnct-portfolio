@@ -97,13 +97,15 @@ const Navbar = () => {
             animate={{
               opacity: 1,
               backdropFilter:
-                theme === "dark" ? "blur(20px)" : "blur(60px)",
+                theme === "dark" ? "blur(20px)" : "blur(80px)",
             }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/40 z-40"
+            transition={{ duration: 0.3 }} 
+             className={`fixed inset-0 z-40 ${
+    theme === "dark" ? "bg-black/40" : "bg-white/40"
+  }`}
           />
-
+ 
             <motion.div
               key="mobile-menu"
               initial={{ y: "100%" }}

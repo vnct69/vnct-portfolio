@@ -35,7 +35,7 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-tight drop-shadow-sm tracking-tight"
+              className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-tight drop-shadow-sm tracking-tight"
             >
               <span className="block text-black dark:text-white">
                 "Stay genuine, tables 
