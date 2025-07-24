@@ -22,7 +22,6 @@ const Contact = () => {
     { icon: <FaInstagram />, color: "hover:bg-[#E1306C]", link: "https://www.instagram.com/vnct._/" },
     { icon: <FaTiktok />, color: "hover:bg-[#25F4EE]", link: "https://tiktok.com/@vnct_28" },
     { icon: <FaGithub />, color: "hover:bg-[#333]", link: "https://github.com/vnct69" },
-    { icon: <FaLinkedin />, color: "hover:bg-[#0077b5]", link: "https://linkedin.com/in/vnct/" },
   ];
 
   const validate = () => {
@@ -128,6 +127,24 @@ const Contact = () => {
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Location</p>
                     <p className="font-medium">San Pablo City, Laguna</p>
+                  </div>
+                </div>
+
+                {/* LinkIn Badge */}
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#0077b5]/20 dark:bg-[#0077b5]/10">
+                    <FaLinkedin className="w-5 h-5 text-[#4ca771]" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">LinkedIn</p>
+                    <a
+                      href="https://www.linkedin.com/in/vnct/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium hover:underline"
+                    >
+                      linkedin.com/in/vnct
+                    </a>
                   </div>
                 </div>
               </div>
