@@ -32,21 +32,30 @@ Deployed at: **[vnct.vercel.app](https://vnct.vercel.app)**
 
 ## 🛠 Tech Stack
 
-<div align="center">
-  <!-- Frontend icons -->
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
-  <div><strong>Frontend</strong></div>
+<div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
 
-  <!-- Styling icons -->
-  <img src="https://img.shields.io/badge/Tailwind%20Themes-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <div><strong>Styling</strong></div>
+  <!-- Frontend -->
+  <div style="text-align: center;">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+    <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+    <img src="https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
+    <div><strong>Frontend</strong></div>
+  </div>
 
-  <!-- Deployment icons -->
-  <img src="https://img.shields.io/badge/Vercel-000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <div><strong>Deployment</strong></div>
+  <!-- Styling -->
+  <div style="text-align: center;">
+    <img src="https://img.shields.io/badge/Tailwind%20Themes-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+    <div><strong>Styling</strong></div>
+  </div>
+
+  <!-- Deployment -->
+  <div style="text-align: center;">
+    <img src="https://img.shields.io/badge/Vercel-000?style=for-the-badge&logo=vercel&logoColor=white" />
+    <div><strong>Deployment</strong></div>
+  </div>
+
 </div>
+
 
 ---
 
