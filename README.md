@@ -38,16 +38,13 @@ Deployed at: **[vnct.vercel.app](https://vnct.vercel.app)**
   <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
   <img src="https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
   <div><strong>Frontend</strong></div>
-  <br />
 
   <!-- Styling icons -->
   <img src="https://img.shields.io/badge/Tailwind%20Themes-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" />
   <div><strong>Styling</strong></div>
-  <br />
 
   <!-- Deployment icons -->
   <img src="https://img.shields.io/badge/Vercel-000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" />
   <div><strong>Deployment</strong></div>
 </div>
 

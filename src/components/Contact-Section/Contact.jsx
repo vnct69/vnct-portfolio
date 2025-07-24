@@ -20,7 +20,7 @@ const Contact = () => {
   const socials = [
     { icon: <FaFacebook />, color: "hover:bg-[#1877F2]", link: "https://www.facebook.com/vicente.escondo" },
     { icon: <FaInstagram />, color: "hover:bg-[#E1306C]", link: "https://www.instagram.com/vnct._/" },
-    { icon: <FaTiktok />, color: "hover:bg-[#25F4EE]", link: "https://tiktok.com/@vnct_28" },
+    { icon: <FaTiktok />, color: "hover:bg-[#0077b5]", link: "https://tiktok.com/@vnct_28" },
     { icon: <FaGithub />, color: "hover:bg-[#333]", link: "https://github.com/vnct69" },
   ];
 
