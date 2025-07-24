@@ -41,6 +41,7 @@ const Hero = () => {
         <div className="w-full md:w-1/3 flex justify-center">
           <img
             src="/hero-img.png"
+            loading="lazy"
             alt="Aaron Vincent"
             className="w-64 sm:w-52 md:w-auto h-auto object-cover rounded-full border-4 shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_rgba(76,167,113,0.6)]"
             style={{ borderColor: "#4CA771" }}

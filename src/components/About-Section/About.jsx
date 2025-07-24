@@ -37,6 +37,7 @@ const About = () => {
             <div className="flex-1 flex items-center justify-center">
               <motion.img
                   src="/about-img.jpg"
+                  loading="lazy"
                   alt="about-img"
                   className="rounded-2xl w-full max-w-[600px] object-cover shadow-lg hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_rgba(76,167,113,0.6)] transition-all duration-500 ease-in-out"
                   initial={{ opacity: 0, y: 0.95 }}
