@@ -85,7 +85,8 @@ const Contact = () => {
     errors[field] && <p className="text-red-500 text-sm mt-1">{errors[field]}</p>;
 
   return (
-    <section id="contact" className="min-h-screen py-20 px-6 bg-gray-100 dark:bg-black text-black dark:text-white transition-colors duration-500">
+    // <section id="contact" className="min-h-screen py-20 px-6 bg-gray-100 dark:bg-black text-black dark:text-white transition-colors duration-500">
+    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-20 bg-gray-100 dark:bg-black text-black dark:text-white transition-colors duration-500">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="container mx-auto">
         <motion.h2
@@ -132,7 +133,7 @@ const Contact = () => {
 
                 {/* LinkIn Badge */}
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#0077b5]/20 dark:bg-[#0077b5]/10">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#4ca771]/20 dark:bg-[#4ca771]/10">
                     <FaLinkedin className="w-5 h-5 text-[#4ca771]" />
                   </div>
                   <div>

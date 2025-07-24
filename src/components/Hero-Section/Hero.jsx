@@ -28,12 +28,15 @@ const Hero = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="relative z-10 flex flex-col md:flex-row items-center justify-center px-6 py-20 md:py-32 bg-gray-100 dark:bg-black dark:text-white transition-colors duration-500">
+      // className="relative z-10 flex flex-col md:flex-row items-center justify-center px-6 py-20 md:py-32 bg-gray-100 dark:bg-black dark:text-white transition-colors duration-500">
+      className="relative z-10 flex flex-col md:flex-row items-center justify-center py-16 px-4 sm:px-6 lg:px-20 bg-gray-100 dark:bg-black dark:text-white transition-colors duration-500">
       
       {/* Background Particles */}
       <ParticlesBackground />
 
-    <div className="flex flex-col md:flex-row items-center justify-center max-w-8xl mx-auto w-full">
+    {/* <div className="flex flex-col md:flex-row items-center justify-center max-w-8xl mx-auto w-full"> */}
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+
         {/* Left - Image */}
         <div className="w-full md:w-1/3 flex justify-center">
           <img

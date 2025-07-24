@@ -44,7 +44,7 @@ const educationData = [
 
 const Education = ({ isDarkMode }) => {
   return (
-    <section id="education" className="min-h-screen py-20 px-6 bg-gray-100 dark:bg-black text-black dark:text-white transition-colors duration-500">
+    <section id="education" className="py-16 px-4 sm:px-6 lg:px-20 bg-gray-100 dark:bg-black text-black dark:text-white transition-colors duration-500">
       <div className="container mx-auto">
         {/* Heading */}
         <motion.h2
