@@ -1,3 +1,9 @@
+/*
+ * © 2025 Aaron Vincent Escondo. All rights reserved.
+ * Unauthorized copying or redistribution of this file, via any medium, is strictly prohibited.
+ * Written consent from the author is required.
+ */
+
 import { usePreferredTheme } from "./hooks/usePreferredTheme";
 import { useLoading } from "./hooks/useLoading";
 import { useShowParticles } from "./hooks/useShowParticles";
