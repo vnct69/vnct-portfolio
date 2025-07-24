@@ -1,12 +1,60 @@
-# React + Vite
+<h1 align="center">👨‍💻 vnct-portfolio</h1>
+<p align="center">
+  A modern, responsive, and animated portfolio website built with <b>React</b>, <b>Tailwind CSS</b>, <b>Framer Motion</b>, and <b>Vite</b>.
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="https://www.linkedin.com/in/vnct/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/vnct69/vnct-portfolio" target="_blank">
+    <img src="https://img.shields.io/github/stars/vnct69/vnct-portfolio?style=flat&logo=github" />
+  </a>
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Overview
 
-## Expanding the ESLint configuration
+This is my personal web developer portfolio showcasing my skills, projects, and professional background. Designed with a clean and modern layout using custom themes that support both light and dark mode.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Deployed at: **[vnct.vercel.app](https://vnct.vercel.app)**
+
+---
+
+## 🚀 Features
+
+- ⚡️ Fast and lightweight (powered by Vite)
+- 🎨 Tailwind CSS custom theme with dark mode
+- 🎥 Smooth page transitions via Framer Motion
+- 📨 Contact form with EmailJS integration
+- 📱 Fully responsive on all devices
+- 📁 Organized project sections and reusable components
+
+---
+
+## 🛠 Tech Stack
+
+| Category       | Tech Used                          |
+|----------------|------------------------------------|
+| **Frontend**   | React, Tailwind CSS, Framer Motion |
+| **Styling**    | Tailwind Custom Themes             |
+| **Animations** | Framer Motion                      |
+| **Deployment** | Vercel or Netlify (your choice)    |
+| **Form**       | EmailJS                            |
+| **Build Tool** | Vite                               |
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/vnct69/vnct-portfolio.git
+cd vnct-portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
